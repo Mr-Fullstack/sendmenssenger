@@ -1,0 +1,108 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto+Mono');
+/*resets*/
+*{padding: 0;margin: 0; box-sizing: border-box;}
+body{
+    color:#00f260 ;
+    width: 100%;  font-size: 16px;
+    font-family: 'Roboto Mono', monospace; 
+}
+ul{ 
+    list-style: none; 
+    text-align: right;
+}
+.header{ 
+    display: flex; 
+    justify-content: space-between;
+    padding: 1rem;
+}
+h2.header__navegation>a{
+    color:#00f260 ;
+    text-decoration: none;
+}
+h3{text-shadow: 0px 0px 1px rgb(6, 43, 22);}
+.container{ display: flex; text-align: center; justify-content: center; flex-direction: column; }
+.container>h2{
+    margin-top: 5rem;
+}
+.btn{ padding: 1rem;border: none; background: #00f260;}
+.btn>a{
+    padding: 1rem;
+    font-family: 'Roboto Mono', monospace; 
+    color:#ffffff ;
+    text-decoration: none;
+}
+.tarefas{
+    padding: 2rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-top:5rem;
+}
+.container__menu--mobile{
+    display: none;
+    background: #00f260;
+    width: 100%;
+    color: #fff;
+    text-align: right;
+}
+
+.tarefas>div{ 
+    padding: 1.5rem;
+    width: 300px;
+    height: 350px;
+    border: 0.5px solid #00f260;
+
+}
+
+.container-menu{
+    display: flex;
+    justify-content: center;
+}
+.jw_menu_close{ display: none;}
+
+input{ 
+    background: linear-gradient(to right, #00f260, #0575e6);
+    border: none;
+    padding: .5rem;
+    color: #ffffff;
+    margin: 1rem;
+    outline: none;
+
+}
+
+input[type="submit"]{
+    background: linear-gradient(to right, #00f260, #0575e6);
+}
+
+::-moz-placeholder{
+    color: #fff;
+    text-shadow: 0px 0px 5px seagreen;
+}
+::-webkit-input-placeholder{
+    color: #fff;
+    text-shadow: 0px 0px 5px rgb(0, 17, 7);
+}
+
+a{ 
+  color: #00f260;
+    text-decoration: none;
+}
+
+@media screen and (max-width:720px){
+    .tarefas{ 
+        flex-direction: column;
+   }
+
+   .tarefas>div{ 
+       width: 100%;
+       margin-top: 2em;
+   } 
+
+   .container-menu{
+    display: none;
+    flex-direction: column;
+}
+.container__menu--mobile{ display: inline;}
+.jw_menu_close{ display: none;}
+}
