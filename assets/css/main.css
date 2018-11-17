@@ -1,0 +1,196 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto+Mono');
+/*resets*/
+*{padding: 0;margin: 0; box-sizing: border-box;}
+body{
+   
+    width: 100%;  font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+    color: #0790cb;
+}
+
+/*style*/
+
+.header__wrapper{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.header__slogan-site{
+    background-color: #fff;
+    color: #000000;
+    text-shadow:0px 0px 0px;
+    font-size: 2rem;
+}
+.container{ 
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    height: auto;
+    text-align: center;
+    grid-template-areas: "signin signup"
+                            "hero hero";
+}
+.form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.signin{
+    grid-area: signin;
+    border-right: .9px solid #f2f2f2;
+}
+.signup{
+    grid-area: signup;
+}
+.hero{
+    color: #000000;
+    font-size: 3rem;
+    grid-area: hero;
+}
+.signin,.signup{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+h2{ color: #000000}
+form>input{
+border: none;
+height: 2rem;
+background: linear-gradient(to right, #00f260, #0575e6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: #fff; 
+font-size: 1rem;
+text-shadow: 0px 0px 5px rgb(6, 43, 22);
+width:50%;
+font-family: 'Roboto Slab', serif;
+box-shadow:none;
+outline-color: rgb(255, 255, 255);
+padding-left: 1rem;
+transition: all 1s;
+border-bottom: 0.5px solid #fbfbfb;
+
+
+}
+
+form>input:focus{ 
+    transform: scale(1.2);
+    box-shadow: 0px 1.5px 5px #000;
+    text-align: center;
+    transition: all .1s;
+    border-bottom: 0px;
+}
+
+form>input[type="submit"]{
+    width:20%; 
+    transform: scale(1);
+    padding-left: 0px;
+    margin-top: 1rem;
+}
+::-moz-placeholder{
+    color: #fff;
+    text-shadow: 0px 0px 5px seagreen;
+}
+::-webkit-input-placeholder{
+    color: #fff;
+    text-shadow: 0px 0px 5px rgb(0, 17, 7);
+    
+
+}
+
+.footer{ 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.footer-menu>Li{ 
+    display: inline;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+a{ 
+color:#0790cb;
+text-decoration: none;
+}
+.logout{ 
+
+    position: absolute;
+    display: flex;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.cross{ 
+    cursor: pointer;
+    margin-top: -16%;
+    margin-left: 99%;
+    font-size: 20px;
+    color:#fff;
+}
+.logout-msg{ 
+
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background: linear-gradient(to right, #0f80f1b0, #0576e6b0);
+    width:25%;
+    height: 25%;  
+    flex-direction: column; 
+    font-size: 11px;  
+    padding: 1rem;
+}
+.logout-msg>h2{ 
+    z-index: 11;
+    color: #ffffff; 
+}
+@media screen and (max-width:720px){
+
+.header__wrapper{
+        text-align: center;
+        font-size: 1.2rem;
+    
+}
+.header__slogan-site{
+    font-size: 1rem;
+}
+h2{ font-size: 0.9em; }
+.hero{
+   font-size: 1.3rem;
+   margin-top: 1rem;
+}
+.container{ 
+        grid-template-columns: 1fr;
+        grid-template-areas: "signin"
+                             "signup"
+                             "hero";
+}
+.signin{
+    border-right: none;
+}
+.container>section{ 
+    margin-top: 2rem;
+}
+.logout-msg{
+    width: 90%;
+}
+
+.footer{
+    font-size: 1rem;
+}
+
+}
+
+
