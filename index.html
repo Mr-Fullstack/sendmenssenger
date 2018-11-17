@@ -1,0 +1,77 @@
+<?php 
+$username=isset($_GET['nome'])?$_GET['nome']:NULL;
+$cadastro=isset($_GET['cadastro'])?$_GET['cadastro']:NULL;
+$account=isset($_GET['account'])?$_GET['account']:NULL;
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <title>Send Messenger</title>
+</head>
+<body>
+<?php 
+    if(!empty($username)){?>
+    <div class="logout animated zoomIn">
+        <span class="logout-msg"><i class="fas fa-times cross jw-cross"></i>
+   <?php 
+       echo"<h2><p>Estamos te esperando </p> Volte logo $username </h2></span>";
+       }
+
+    ?> 
+   </div>
+   <?php
+         if(!empty($cadastro) & !empty($account) ){ ?>
+         <div class="logout animated zoomIn">
+        <span class="logout-msg"><i class="fas fa-times cross jw-cross"></i>
+        <?php 
+           echo" <h2><p>Cadastro efetuado com sucesso</p> Logue Agora $account! </h2></span>";
+        } 
+    ?>
+  </div>    
+   
+    <header class="header">
+        <div class="header__wrapper">
+            <h1 class="header__title-site">Send Messenger</h1>
+            <h3 class="header__slogan-site">Novo jeito de mandar mensagens </h3>
+        </div><!--header__wrapper-->
+    </header><!--header-->
+    <div class="container">
+        <section class="signin">
+            <h2>Logar:</h2><br>
+            <form  method="POST" class="form" action="control/login.php"name="form-login">
+                <input required type="email" placeholder="email" name="email">
+                <input required type="password" placeholder="senha" name="senha">
+                <input type="submit" value="Yup !">           
+            </form><!--form-login-->
+        </section><!--signin-->
+        <section class="signup">
+            <h2>Cadastre-se:</h2><br>
+            <form method="POST" class="form" action="control/register.php" name="form-register">
+                <input  required type="text" placeholder="Primeiro nome" name="primeironome">
+                <input  required type="text" placeholder="Último nome" name="ultimonome">
+                <input  required type="email" placeholder="Email" name="email">
+                <input  required type="password" placeholder="Senha" name="senha">
+                <input  type="submit" value="Yup !">     
+            </form><!--form-register-->
+        </section><!--singup-->
+        <h3 class="hero">É grátis ! </h3>
+    </div><!--container-->
+    <footer class="footer">
+        <ul class="footer-menu">
+            <li><a href=""> Sobre nós  </a></li>
+            <li><a href=""> Saiba mais </a></li>
+            <li><a href=""> Blog       </a></li>
+            <li><a href=""> Equipe     </a></li>
+        </ul><!--footer-menu-->
+        <h5>copyright &copy Send Menssenger, all rights reserved.</h5>
+    </footer><!--footer-->
+    <script src="./assets/js/jquery.js"></script>
+   <script src="./assets/js/function.js"></script>
+</body>
+</html>
